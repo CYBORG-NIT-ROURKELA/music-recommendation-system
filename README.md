@@ -11,7 +11,7 @@ Music Recommendation System based on the emotion from the camera feed
 * Perform all the development activities in this branch and raise PRs accordingly with proper commit message and description along with screenshots, images (if necessary)
 
 ---
-2. RULLS FOR PULL REQUEST (PR) RAISE
+2. RULES FOR PULL REQUEST (PR) RAISE
 * Use proper commit message describing the tasks performed in the commit.
 * Treat `master` branch as your master branch, i.e. all your PRs should use `master` as the target branch. e.g. `git push origin YOUR_BRANCH_NAME` and then use `master` as the target branch while creating PRs.
 
