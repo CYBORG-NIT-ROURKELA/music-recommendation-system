@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/signup.css">
+    <!--<h2>Modal Signup Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+    <form class="modal-content" id="signup-form">
+        <!-- action="/action_page.php" -->
+
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="Username"><b>Username</b></label>
+            <input type="text" placeholder="Username" name="Username" required id="username">
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required id="email">
+
+            <label for="Gender"><b>Gender</b></label>
+            <input type="text" placeholder="Male or Female" name="Gender" required id="gender">
+
+            <label for="language1"><b> Preferred Language 1</b></label>
+            <input type="text" placeholder="Choice 1" name="l1" required id="language1">
+
+            <label for="language2"><b>Preferred Language 2</b></label>
+            <input type="text" placeholder="Choice 2" name="l2" required id="language2">
+
+            <label for="language3"><b>Preferred Language 3</b></label>
+            <input type="text" placeholder="Choice 3" name="l3" required id="language3">
+
+            <label for="Phone no."><b>Phone Number</b></label>
+            <input type="text" placeholder="+91   " name="Phone no." required id="phone-number">
+
+            <label for="Address"><b>Address</b></label>
+            <input type="text" placeholder="Fill the address" name="Adress" required id="address">
+
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required id="signup-password">
+
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="psw-repeat" required id="confirm-password">
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <!--   <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>   -->
+
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" class="signupbtn" id="signup">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#signup").on('click', (function(e) {
+                e.preventDefault();
+                var name = $("#username").val();
+                var email = $("#email").val();
+                var gender = $("#gender").val();
+                var address = $("#address").val();
+                var language1 = $("#language1").val();
+                var language2 = $("#language2").val();
+                var language3 = $("#language3").val();
+                var phoneno = $("#phone-number").val();
+                var password = $("#signup-password").val();
+                var cpass = $("#confirm-password").val();
+
+                // console.log(name);
+
+                $.ajax({
+                    url: '../apis/signup.php',
+                    data: {
+                        name: name,
+                        email: email,
+                        gender: gender,
+                        phoneno: phoneno,
+                        address: address,
+                        language1: language1,
+                        language2: language2,
+                        language3: language3,
+                        password: password,
+                        cpass: cpass
+
+                    },
+                    type: 'POST',
+                    success: function(response) {
+                        console.log(response);
+                        var res = JSON.parse(response);
+                        if (res.status == "success") {
+                            console.log('success');
+                            swal('Registration Successfull!', '', 'success').then((
+                                value) => {
+                                window.location = './login.html';
+                            });
+                        } else {
+                            swal(res.message, '', 'error');
+
+                        }
+                    }
+                });
+                return false;
+            }));
+            return false;
+        });
+    </script>
+</body>
+
+</html>
