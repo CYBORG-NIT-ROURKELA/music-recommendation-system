@@ -1,64 +1,157 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/signup.css">
+</head>
+
 <body>
-<title>Signup</title>
-<link rel="stylesheet" type="text/css" href="../assets/css/signup.css">
-<!--<h2>Modal Signup Form</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                    <img src="../assets/img/bg-img/54.jpg" alt="signup image" class="signup-img">
+                </div>
+                <div class="col-sm-6 signup-section-wrapper">
+                    <div class="brand-wrapper">
+                        <img src="../assets/img/core-img/logo.png" alt="logo" class="logo">
+                    </div>
+                    <div class="signup-wrapper my-auto">
+                        <h1 class="signup-title">Sign up</h1>
 
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
-  <form class="modal-content" action="/action_page.php">
-   
-    <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-       <label for="Username"><b>Username</b></label>
-      <input type="text" placeholder="Username" name="Username" required>
+                        <p>Please fill in this form to create an account.</p>
+                        <form id='signup-form'>
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+                            <label for="Username"><b>Username</b></label>
+                            <input type="text" placeholder="Username" name="Username" required id="username">
 
-       <label for="Gender"><b>Gender</b></label>
-      <input type="text" placeholder="Male or Female" name="Gender" required>
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required id="email">
 
-       <label for="language1"><b> Preferred Language 1</b></label>
-      <input type="text" placeholder="Choice 1" name="l1" required>
+                            <label for="gender-block"><b>Gender</b></label>
 
-       <label for="language2"><b>Preferred Language 2</b></label>
-      <input type="text" placeholder="Choice 2" name="l2" required>
-
-         <label for="language3"><b>Preferred Language 3</b></label>
-      <input type="text" placeholder="Choice 3" name="l3" required>
-
-       <label for="Phone no."><b>Phone Number</b></label>
-      <input type="text" placeholder="+91   " name="Phone no." required>
-
-        <label for="Address"><b>Address</b></label>
-      <input type="text" placeholder="Fill the address" name="Adress" required>
+                            <div id="gender" class="d-flex justify-content-around">
+                                <label class="radio-inline mr-2">
+                                    <input type="radio" class="gender" name="gender" value="male" checked>
+                                    male
+                                </label>
+                                <label class="radio-inline mr-2">
+                                    <input type="radio" class="gender" name="gender" value="female">
+                                    female
+                                </label>
+                                <label class="radio-inline mr-2">
+                                    <input type="radio" class="gender" name="gender" value="other">
+                                    other
+                                </label>
+                            </div>
 
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <label for="psw-repeat"><b>Confirm Password</b></label>
-      <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
-      
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
+                            <label for="language1"><b> Preferred Language 1</b></label>
+                            <input type="text" placeholder="Choice 1" name="l1" required id="language1">
 
-   <!--   <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>   -->
+                            <label for="language2"><b>Preferred Language 2</b></label>
+                            <input type="text" placeholder="Choice 2" name="l2" required id="language2">
 
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
+                            <label for="language3"><b>Preferred Language 3</b></label>
+                            <input type="text" placeholder="Choice 3" name="l3" required id="language3">
+
+                            <label for="Phone no."><b>Phone Number</b></label>
+                            <input type="text" placeholder="+91   " name="Phone no." required id="phone-number">
+
+                            <label for="Address"><b>Address</b></label>
+                            <input type="text" placeholder="Fill the address" name="Adress" required id="address">
+
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required id="signup-password">
+
+                            <label for="psw-repeat"><b>Confirm Password</b></label>
+                            <input type="password" placeholder="Confirm Password" name="psw-repeat" required id="confirm-password">
+
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                                Remember me
+                            </label>
+                            <input name="signup" id="signup" class="btn btn-block signup-btn" type="button" value="Signup">
+                        </form>
+                        <!-- <a href="#!" class="forgot-password-link">Forgot password?</a> -->
+                        <p class="signup-wrapper-footer-text text-center">Have an account? <a href="./login.html" class="text-reset" style="color:#4908fd !important;"> login
+                                here</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </form>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#signup").on('click', (function(e) {
+                    e.preventDefault();
+                    var name = $("#username").val();
+                    var email = $("#email").val();
+                    var gender = $(".gender:checked").val();
+                    var address = $("#address").val();
+                    var language1 = $("#language1").val();
+                    var language2 = $("#language2").val();
+                    var language3 = $("#language3").val();
+                    var phoneno = $("#phone-number").val();
+                    var password = $("#signup-password").val();
+                    var cpass = $("#confirm-password").val();
+
+                    // console.log(name);
+
+                    $.ajax({
+                        url: '../apis/signup.php',
+                        data: {
+                            name: name,
+                            email: email,
+                            gender: gender,
+                            phoneno: phoneno,
+                            address: address,
+                            language1: language1,
+                            language2: language2,
+                            language3: language3,
+                            password: password,
+                            cpass: cpass
+
+                        },
+                        type: 'POST',
+                        success: function(response) {
+                            console.log(response);
+                            var res = JSON.parse(response);
+                            if (res.status == "success") {
+                                console.log('success');
+                                swal('Registration Successfull!', '', 'success').then((
+                                    value) => {
+                                    window.location = './login.html';
+                                });
+                            } else {
+                                swal(res.message, '', 'error');
+
+                            }
+                        }
+                    });
+                    return false;
+                }));
+                return false;
+            });
+        </script>
 </body>
+
 </html>
