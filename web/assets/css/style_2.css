@@ -61,17 +61,22 @@ Last Update: Jan 13, 2018
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden !important;
+
    }
 
 
 
 body {
+ overflow-x: hidden !important;
+ overflow-y: scroll;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   position: relative;
   z-index: auto;
+
+
+
    }
 
 h1,
@@ -134,10 +139,10 @@ ul {
 
     #video {
 
-      padding: 10px !important;
-      height: 80%  !important;
+      top: 10% !important;
+      height: 100%  !important;
   width: 100%    !important;
-  position: relative;
+  position: absolute;
 
   
 

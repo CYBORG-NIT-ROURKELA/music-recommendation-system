@@ -7,11 +7,17 @@
   width: 25%;
   height: 200px;
 }
+* {
+  margin: 0;
+  padding: 0;
+  
+   }
 
 
 body {
-    overflow-y: scroll;
-    overflow-x: hidden !important;
+   overflow-x: hidden !important;
+   
+    
 }
 
 #mydivheader {
