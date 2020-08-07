@@ -8,6 +8,12 @@
   height: 200px;
 }
 
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+}
+
 #mydivheader {
   padding: 10px;
   cursor: move;

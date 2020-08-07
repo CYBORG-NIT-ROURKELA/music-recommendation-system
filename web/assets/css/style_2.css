@@ -60,14 +60,19 @@ Last Update: Jan 13, 2018
 /* :: 1.0 Reboot CSS */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden !important;
+   }
+
+
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   position: relative;
-  z-index: auto; }
+  z-index: auto;
+   }
 
 h1,
 h2,
