@@ -5,7 +5,9 @@ body {
 
 .brand-wrapper {
   padding-top: 7px;
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: #000000; }
   .brand-wrapper .logo {
     height: 25px; }
 
