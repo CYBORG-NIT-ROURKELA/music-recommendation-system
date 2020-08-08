@@ -139,10 +139,10 @@ ul {
 
     #video {
 
-      top: 10% !important;
-      height: 100%  !important;
-  width: 100%    !important;
-  position: absolute;
+      
+      
+     display: inline-block;
+    vertical-align: middle;
 
   
 
