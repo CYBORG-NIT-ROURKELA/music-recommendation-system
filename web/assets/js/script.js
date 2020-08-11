@@ -8,6 +8,7 @@ Promise.all([
   faceapi.nets.faceExpressionNet.loadFromUri('models')
 ]).then(startVideo)
 
+<<<<<<< Updated upstream
 function emotionplayer(w)
 {
 
@@ -61,6 +62,8 @@ if (w=="angry")
 
 
 }
+=======
+>>>>>>> Stashed changes
 
 
 function startVideo() {
@@ -144,11 +147,71 @@ arr2.push(angercount, disgustedcount,fearfulcount,happycount,neutralcount,sadcou
   console.log(arr1[0]);
   console.log("Hela aaau Gote khushi aau");
 
+<<<<<<< Updated upstream
   var label_max = arr1[0];
 
   
 
 console.log(emotionplayer(label_max));
+=======
+  var w= arr1[0];
+
+  if (w=="angry")
+  {
+    
+         $(".audio_tra").attr("src", "One Step Closer (Official Video) - Linkin Park.mp3");
+        $(".sound_t").trigger('load');
+        $(".sound_t").trigger('play');
+        console.log("Coming");
+  }
+  else if(w=="disgusted")
+  {
+    
+          $(".audio_tra").attr("src", "Sunn Raha Hai.mp3");
+        $(".sound_t").trigger('load');
+        $(".sound_t").trigger('play');
+        console.log("Coming");
+
+  }
+  else if(w=="fearful")
+  {
+   
+          $(".audio_tra").attr("src", "Michael Jackson - Thriller.mp3");
+        $(".sound_t").trigger('load');
+        $(".sound_t").trigger('play');
+        console.log("Coming");
+  }
+  else if(w=="happy")
+  {
+
+        $(".audio_tra").attr("src", "Coca_cola.mp3");
+        $(".sound_t").trigger('load');
+        $(".sound_t").trigger('play');
+        console.log("Coming");
+
+
+
+  }
+  else if(w=="neutral")
+  {
+   
+        $(".audio_tra").attr("src", "Dheeme.mp3");
+        $(".sound_t").trigger('load');
+        $(".sound_t").trigger('play');
+        console.log("Coming");
+        // console.log;
+  }
+  
+  else 
+  {
+  
+       $(".audio_tra").attr("src", "Godzilla (feat. Juice WRLD) [Official Audio].mp3");
+        $(".sound_t").trigger('load');
+        $(".sound_t").trigger('play');
+        console.log("Coming");
+  }
+
+>>>>>>> Stashed changes
   while(arr2.length > 0)
   {
     arr2.pop();
@@ -170,7 +233,11 @@ console.log(emotioncounter(x));
 
 
     
+<<<<<<< Updated upstream
   }, 1000)
+=======
+  }, 400)
+>>>>>>> Stashed changes
 })
 
 var count = 0; 
