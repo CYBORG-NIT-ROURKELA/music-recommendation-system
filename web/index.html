@@ -12,11 +12,13 @@
 
     <!-- Favicon -->
     <link rel="icon" href="assets/img/core-img/favicon.ico">
-
+ <script defer src="./assets/js/face-api.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style_2.css">
+   
     <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/animate.css"> 
     <link rel="stylesheet" type="text/css" href="./assets/css/default-assets/audioplayer.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/default-assets/classy-nav.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/magnific-popup.css">
@@ -116,7 +118,8 @@
 <!-- draggable box starts -->
 
 <div id="mydiv">
-  <div id="mydivheader">Click here to move</div>
+  <div id="mydivheader">Look into the box</div>
+  <video id="video" width="100%" height="80%" autoplay muted></video>
  
 </div>
 
@@ -208,22 +211,34 @@
     <!--Welcome area end -->
 
  <!-- Audio Player Area Start -->
-    <div class="podcast-audio-player-area" >
-        <div class="container" >
+    <div class="podcast-audio-player-area">
+        <div class="container">
             <div class="row">
-
                 <div class="col-12">
                     <div class="audio-player">
-                        <audio preload="auto" controls>
-                            <source src="assets/audio/dummy-audio.mp3">
+                        <audio preload="none" s controls class="sound_t">
+                            <source src="Dheeme.mp3" type="audio/mpeg" class="audio_tra">
                         </audio>
-                            
-                       
+                        <audio preload="none" s controls class="sound_t">
+                            <source src="Coca_cola.mp3" type="audio/mpeg" class="audio_tra">
+                        </audio>
+                        <audio preload="none" s controls class="sound_t">
+                            <source src="Sunn Raha Hai.mp3" type="audio/mpeg" class="audio_tra">
+                        </audio>
+                        <audio preload="none" s controls class="sound_t">
+                            <source src="One Step Closer (Official Video) - Linkin Park.mp3" type="audio/mpeg" class="audio_tra">
+                        </audio>
+                        <audio preload="none" s controls class="sound_t">
+                            <source src="Michael Jackson - Thriller.mp3" type="audio/mpeg" class="audio_tra">
+                        </audio>
+                        <audio preload="none" s controls class="sound_t">
+                            <source src="Godzilla (feat. Juice WRLD) [Official Audio].mp3" type="audio/mpeg" class="audio_tra">
+                        </audio>
+
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <!-- Audio Player Area End -->
 
@@ -265,7 +280,7 @@
                                 </audio>
                             </div>
                             <div class="music-title">
-                                <h5>Way Back Home - <span>RadioDaily Show</span></h5>
+                                <h5>Dheeme Dheeme- <span>Pati,Patni aaur woh</span></h5>
                             </div>
                         </div>
                         <!-- Music Price -->
@@ -290,7 +305,7 @@
                                 </audio>
                             </div>
                             <div class="music-title">
-                                <h5>Goodbye &amp; Good Riddance - <span>Juice World</span></h5>
+                                <h5>Cocacola- <span>Pati,Patni aaur woh</span></h5>
                             </div>
                         </div>
                                         
@@ -312,7 +327,7 @@
                                 </audio>
                             </div>
                             <div class="music-title">
-                                <h5>The Greatest Showman - <span>Soundtrack</span></h5>
+                                <h5>Thriller <span>Michael Jackson</span></h5>
                             </div>
                         </div>
                      
@@ -334,7 +349,7 @@
                                 </audio>
                             </div>
                             <div class="music-title">
-                                <h5>Mamma Mia! Here We Go Again - <span>Soundtrack</span></h5>
+                                <h5>Uptown Funk <span>Soundtrack</span></h5>
                             </div>
                         </div>
 
