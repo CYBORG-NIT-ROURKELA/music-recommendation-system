@@ -16,7 +16,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST" ){
        		 { 
                   $query_row = mysqli_fetch_array($query_run,MYSQLI_ASSOC);
                   $_SESSION['logged_in'] = 1;
-                  $_SESSION['name'] = $query_row['username'];
+				  $_SESSION['name'] = $query_row['username'];
+				  $_SESSION['user_id']=$query_row['id'];
                   $_SESSION['email']=$query_row['email'];
                   echo(json_encode(array('status'=>'success')));
 
